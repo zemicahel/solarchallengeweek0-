@@ -14,7 +14,7 @@ selected_countries = st.multiselect(
 
 dfs = []
 for country in selected_countries:
-    path = f"data/clean/{country.lower().replace(' ','_')}_clean.csv"
+    path = f"../data/clean/{country.lower().replace(' ','_')}_clean.csv"
     df = load_data(path)
     df["Country"] = country
     dfs.append(df)
